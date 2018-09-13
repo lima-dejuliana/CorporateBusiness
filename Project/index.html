@@ -1,12 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Corporate Business</title>
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logoHome">
+                <span></span>
+            </a>
+            <ul class="menubar">
+                <li class="linkMenu"><a href="#">Home</a></li>
+                <li class="linkMenu"><a href="#">About Us</a></li>
+                <li class="linkMenu"><a href="#">Services</a></li>
+                <li class="linkMenu"><a href="#">Blog</a></li>
+                <li class="linkMenu"><a href="#">Pages</a></li>
+                <li class="linkMenu"><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner-home">
+            <div class="imgCarrossel">
+                <img src="img/imgCarrossel-um.png" alt="Banner Carrossel">
+            </div>
+            <div class="imgCarrossel">
+                <img src="img/imgCarrossel-dois.png" alt="Banner Carrossel">
+            </div>
+            <div class="imgCarrossel">
+                <img src="img/imgCarrossel-tres.png" alt="Banner Carrossel">
+            </div>
+            <div class="container banner">
+<!--
+                <div class="col-6 contato-carrossel">
+                   <h3>CONTACT TO</h3>
+                    <h1>BUSINESS PLUS</h1>
+                </div>
+-->
+                <div class="col-12 dot-carrossel">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+        var bannerIndex = 0;
+        carrossel();
+
+        function carrossel() {
+            var i;
+            var x = document.getElementsByClassName("imgCarrossel");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            bannerIndex++;
+            if (bannerIndex > x.length) {
+                bannerIndex = 1
+            }
+            x[bannerIndex - 1].style.display = "block";
+            dots[bannerIndex - 1].className += " active";
+            setTimeout(carrossel, 4500);
+        }
+    </script>
 </body>
+
 </html>
