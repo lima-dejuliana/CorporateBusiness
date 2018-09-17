@@ -69,7 +69,7 @@ header {
 section {
     position: relative;
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 
 section:first-of-type{
@@ -262,4 +262,116 @@ section:first-of-type{
 
 #servicos{
     background-color: rgb(234, 239, 243);
+}
+
+.ico-services{
+    display: inline-block;
+    height: 70px;
+}
+.txt-services:before{
+    content:"";
+    height:2px;
+    width:14px;
+    background-color: transparent;
+    display: block;
+    margin-bottom: 4px;
+}
+.ico-services.um{
+    background: url(../img/ico-services-um.png) left no-repeat;
+}
+.ico-services.dois{
+    background: url(../img/ico-services-dois.png) left no-repeat;
+}
+.ico-services.tres{
+    background: url(../img/ico-services-tres.png) left no-repeat;
+}
+.ico-services.quatro{
+    background: url(../img/ico-services-quatro.png) left no-repeat;
+}
+
+.txt-services{
+    display: inline-block;
+    height: 64px;
+}
+
+.txt-services h4{
+  font-size: 16px;
+  font-family: "Raleway", "Arial", sans-serif;
+  color: rgb(28, 28, 28);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.txt-services p{
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(88, 88, 88);
+  line-height: 2;
+}
+.lista-servicos li:hover .ico-services.um{
+    background: url(../img/ico-services-um-ativo.png) left no-repeat;
+}
+.lista-servicos li:hover .ico-services.dois{
+    background: url(../img/ico-services-dois-ativo.png) left no-repeat;
+}
+.lista-servicos li:hover .ico-services.tres{
+    background: url(../img/ico-services-tres-ativo.png) left no-repeat;
+}
+.lista-servicos li:hover .ico-services.quatro{
+    background: url(../img/ico-services-quatro-ativo.png) left no-repeat;
+}
+
+.lista-servicos li:hover .txt-services:before{
+    background-color: rgb(54,168,255);
+}
+
+.lista-servicos{
+    margin-top: 2.5rem;
+}
+.lista-servicos li{
+    margin-bottom: 1.8rem;
+}
+
+
+.lista-servicos li,
+.lista-servicos span{
+    padding: 0;
+}
+
+.lista-servicos li:nth-child(odd){
+    float: left;
+}
+.lista-servicos li:nth-child(even){
+    float: right;
+}
+
+#servicos .container:after{
+    display: block;
+    content: "";
+    height:78px;
+    width:103px;
+    background-color: rgb(54,168,255);
+    float: right;
+    margin-top: 4.8rem;
+    margin-right: 8rem;
+    -webkit-transform: rotate(132deg);
+    transform: rotate(132deg);
+}
+
+#servicos:after {
+    display: block;
+    content: "";
+    height:76px;
+    width:70px;
+    background-color: rgb(255,175,54);
+    float: right;
+    margin-right:-10.6rem;
+    margin-top: 1.6rem;
+    -webkit-transform: rotate(132deg);
+    transform: rotate(132deg);
+}
+
+#clients{
+    background-color: rgb(255, 255, 255);
 }
