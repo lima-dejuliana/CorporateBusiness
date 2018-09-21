@@ -349,32 +349,46 @@ main section:nth-of-type(1) {
     float: right;
 }
 
-#servicos .container:after {
+#servicos .container:after,
+#servicos:after{
     display: block;
     content: "";
+    float: right;
+    width: 0;
+    height: 0;
+}
+    /*
     height: 78px;
     width: 103px;
     background-color: rgb(54, 168, 255);
-    float: right;
-    margin-top: 5.2rem;
-    margin-right: 8rem;
     -webkit-transform: rotate(132deg);
     transform: rotate(132deg);
+*/
+#servicos .container:after{
+    margin-top: 2.7rem;
+    margin-right: 3.5rem;
+    border-left: 65px solid transparent;
+    border-right: 65px solid transparent;
+    border-bottom: 90px solid rgb(54, 168, 255);
 }
 
 #servicos:after {
-    display: block;
-    content: "";
+    margin-top: 0.25rem;
+    margin-right: -11.5rem;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 60px solid rgb(255, 175, 54);
+}
+/*
     height: 76px;
     width: 70px;
     background-color: rgb(255, 175, 54);
-    float: right;
     margin-right: -10.6rem;
     margin-top: 1.8rem;
     -webkit-transform: rotate(132deg);
     transform: rotate(132deg);
-}
-
+*/
+/*
 #clientes:before {
     display: block;
     content: "";
@@ -383,6 +397,7 @@ main section:nth-of-type(1) {
     margin-top: calc(-58px + -2rem);
     background-color: rgb(255, 255, 255);
 }
+*/
 
 .cite-clientes:before {
     content: "“";
@@ -471,7 +486,7 @@ blockquote p {
     margin-bottom: 1.2rem;
 }
 
-.blog-resume h4 {
+.title-blog {
     font-size: 16px;
     font-family: "Raleway", sans-serif;
     color: rgb(28, 28, 28);
@@ -528,30 +543,30 @@ blockquote p {
 .detalhes-news:after {
     display: block;
     content: "";
-    background-image: -webkit-gradient(linear,left top, right top,from(rgb(28, 28, 28)), color-stop(20%, rgb(28, 28, 28)), color-stop(21%, rgb(255, 175, 54)), to(rgb(255, 175, 54)));
-    background-image: linear-gradient(to right,rgb(28, 28, 28) 0%, rgb(28, 28, 28) 20%, rgb(255, 175, 54)21%, rgb(255, 175, 54)100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgb(28, 28, 28)), color-stop(20%, rgb(28, 28, 28)), color-stop(21%, rgb(255, 175, 54)), to(rgb(255, 175, 54)));
+    background-image: linear-gradient(to right, rgb(28, 28, 28) 0%, rgb(28, 28, 28) 20%, rgb(255, 175, 54)21%, rgb(255, 175, 54)100%);
     width: 100%;
     height: 1px;
     margin: 0.65rem 0;
 }
 
-.detalhes-news:last-of-type::after{
+.detalhes-news:last-of-type::after {
     display: none;
 }
 
 .comentarios,
-.visualizacoes{
+.visualizacoes {
     display: block;
-    width:100%;
-    height:28px;
+    width: 100%;
+    height: 28px;
     margin-bottom: 5px;
 }
 
-.comentarios{
+.comentarios {
     background: url(../img/ico-comment.png) right no-repeat;
-
 }
 
-.visualizacoes{
+.visualizacoes {
     background: url(../img/ico-view.png) right no-repeat;
 }
+
