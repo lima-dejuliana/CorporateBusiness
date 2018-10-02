@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Lora');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Lora|Roboto+Slab');
 
 * {
     margin: 0;
@@ -570,3 +570,62 @@ blockquote p {
     background: url(../img/ico-view.png) right no-repeat;
 }
 
+footer{
+    background-color: rgb(42, 43, 44);
+    padding-bottom: 1rem;
+}
+
+.nav-footer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: baseline;
+}
+
+.redes-sociais{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+.redes-sociais a{
+    display: block;
+    height: 40px;
+    width: 50px;
+    margin: 1rem 0.5rem;
+}
+
+.fb{
+    background: url(../img/ico-fb.png) center no-repeat;
+
+}
+.plus{
+    background: url(../img/ico-googlePlus.png) center no-repeat;
+
+}
+.twitter{
+    background: url(../img/ico-twitter.png) center no-repeat;
+
+}
+.linkedin{
+    background: url(../img/ico-linkedin.png) center no-repeat;
+
+}
+
+.txt-footer{
+    display: block;
+    font-family: "Roboto Slab", serif;
+    font-size: 13px;
+    color: rgb(142, 142, 142);
+    text-transform: uppercase;
+    line-height: 1.846;
+    text-align: center;
+    padding-bottom: 0.4rem;
+}
