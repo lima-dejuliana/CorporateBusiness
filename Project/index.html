@@ -14,18 +14,19 @@
             <a href="index.html" class="logoHome">
                 <span></span>
             </a>
-            <ul class="menubar">
+            <ul class="menubar"> <!-- lista de menu -->
                 <li class="linkMenu"><a href="index.html#home">Home</a></li>
-                <li class="linkMenu"><a href="#sobre">About Us</a></li>
-                <li class="linkMenu"><a href="#servicos">Services</a></li>
-                <li class="linkMenu"><a href="#clientes">Clients</a></li>
-                <li class="linkMenu"><a href="#news">News</a></li>
-                <li class="linkMenu"><a href="#blog">Blog</a></li>
-                <li class="linkMenu"><a href="#contato">Contact Us</a></li>
+                <li class="linkMenu"><a href="index.html#sobre">About Us</a></li>
+                <li class="linkMenu"><a href="index.html#servicos">Services</a></li>
+                <li class="linkMenu"><a href="index.html#clientes">Clients</a></li>
+                <li class="linkMenu"><a href="index.html#news">News</a></li>
+                <li class="linkMenu"><a href="index.html#blog">Blog</a></li>
+<!--                <li class="linkMenu"><a href="contato.html">Contact Us</a></li>-->
             </ul>
         </nav>
     </header>
     <main>
+       <!-- inicio da seção home com banner -->
         <section id="home">
             <div class="imgCarrossel">
                 <img src="img/imgCarrossel-um.png" alt="Banner Carrossel">
@@ -194,30 +195,6 @@
             <small class="txt-footer">Desenvolvido por: <strong>Juliana Lima</strong></small>
         </div>
     </footer>
-<script src="" type="text/javascript"></script>
-    <script>
-        var bannerIndex = 0;
-        carrossel();
-
-        function carrossel() {
-            var i;
-            var x = document.getElementsByClassName("imgCarrossel");
-            var dots = document.getElementsByClassName("dot");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            bannerIndex++;
-            if (bannerIndex > x.length) {
-                bannerIndex = 1
-            }
-            x[bannerIndex - 1].style.display = "block";
-            dots[bannerIndex - 1].className += " active";
-            setTimeout(carrossel, 4500);
-        }
-    </script>
+<script src="js/main.js" type="text/javascript"></script>
 </body>
-
 </html>
